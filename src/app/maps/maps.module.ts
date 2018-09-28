@@ -12,7 +12,7 @@ import { MapsRoutes  } from './maps.routing';
     CommonModule,
     RouterModule.forChild(MapsRoutes),
     SharedModule,
-    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyAAX7liuujaBVrBSpE_QmJ0CZabYX7PTsM'})
+    NguiMapModule.forRoot({apiUrl: 'https://maps.google.com/maps/api/js?key=AIzaSyCR8KzV6CpcQpRvYDb0xp6Vw46HSN6qOes'})
   ],
   declarations: [GoogleMapPage]
 })

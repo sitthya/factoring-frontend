@@ -100,6 +100,27 @@ export interface TimeUnitInterface {
               </ng-template>
             </ul>
           </div>
+          <div class="select-panel"
+          #ampmListInstance *ngIf="_showAMPM"
+          (mouseover)="_overSecond()">
+            <ul class="no-style no-padding text-center">
+              <ng-template
+                ngFor
+                let-_ampm
+                [ngForOf]="_ampmList"
+                let-i="index">
+                <li
+                class="btn btn-link"
+                  [ngClass]="_ampm.name"
+                  [class.active]="_ampm.index===_selectedAMPM"
+                  [class.disabled]="_ampm.disabled"
+                  *ngIf="!(HideDisabledOptions&&_ampm.disabled)"
+                  (click)="_selectAMPM(ampmListInstance,_ampm.index,_ampm.disabled)">
+                  {{ _ampm.name }}
+                </li>
+              </ng-template>
+            </ul>
+          </div>
         </div>
       </div>
       </div>`,

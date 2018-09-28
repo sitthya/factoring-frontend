@@ -13,9 +13,11 @@
 		position: absolute;
 		width: 100%;
 		overflow: hidden;
-		& > img{
+		& > .img-holder{
 			height: 100%;
+			width: 100%;
 			opacity: 0.6;
+			background-size: cover;
 		}
 	}
 	.login-container{

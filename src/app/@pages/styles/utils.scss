@@ -1,5 +1,10 @@
-.modal-open .cdk-overlay-container{
-    z-index: 1050;
+.modal-open {
+    .cdk-overlay-container{
+        z-index: 1055;
+    }
+    pg-message-container{
+        display: none;
+    }
 }
 .cdk-overlay-container{
     pointer-events: none;

@@ -50,6 +50,7 @@
         vertical-align: middle;
         width: $layout-sidepanel-width;
         text-align: center;
+        margin-right: 4px;
     }
 
 
@@ -67,10 +68,16 @@
     .notification-list{
         display:inline-block;
         line-height: 23px;
+        li{
+            margin-right: 4px;
+            &:last-child{
+                margin-right: 1px;
+            }
+        }
     }
     .search-link{
         display:inline-block;
-        margin-left:15px;
+        margin-left:18px;
         color : $color-master;
         opacity: .7;
         font-size:14px;

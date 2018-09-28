@@ -42,9 +42,9 @@ export class CondensedComponent extends RootLayout implements OnInit {
             iconType:"letter",
             iconName:"De",
           }
-        ]
+      ]
       },
-      // SSO End
+      // SSO End	  
       {
           label:"Email",
           details:"234 New Emails",
@@ -89,7 +89,7 @@ export class CondensedComponent extends RootLayout implements OnInit {
             iconName:"bl",
           }
         ]
-      },
+    },
       {
         label:"UI Elements",
         iconType:"letter",

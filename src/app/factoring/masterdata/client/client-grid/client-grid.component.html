@@ -1,0 +1,40 @@
+<!--ul>
+  <li *ngFor="let client of clients">{{client.id + client.companyName}}</li>
+</ul-->
+
+<!-- START card -->
+<div class="card card-transparent">
+  <div class="card-header ">
+    <div class="card-title">The clients
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+      <ngx-datatable
+        class='table table-condensed'
+        [rows]="clients"
+        [columnMode]="columnModeSettingSmall"
+        [scrollbarH]="scrollBarHorizontal"
+        [headerHeight]="43"
+        [footerHeight]="0"
+        [rowHeight]="44"
+        [limit]="5"
+        [sorts]="[{prop: 'id', dir: 'asc'}]">
+        <ngx-datatable-column name="id" cellClass="d-flex align-items-center"></ngx-datatable-column>
+        <ngx-datatable-column name="Company name" cellClass="d-flex align-items-center">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <a [routerLink]= "row.id">{{value}}</a>
+          </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Company name" cellClass="d-flex align-items-center">
+          <ng-template let-row="row" let-value="value" ngx-datatable-cell-template>
+            <div class="text-truncate">
+              {{value}}
+            </div>
+          </ng-template>
+        </ngx-datatable-column>
+      </ngx-datatable>
+    </div>
+  </div>
+</div>
+<!-- END card -->

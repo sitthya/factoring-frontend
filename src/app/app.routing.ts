@@ -42,14 +42,14 @@ export const AppRoutes: Routes = [
   },
   // SSO Begin
   {
-    path: 'condensed',
-    component: CondensedComponent,
-    children: [{
-      path: 'masterdata',
-      loadChildren: './factoring/masterdata/clients/clients.module#ClientsModule'
-    }],
+      path: 'condensed',
+      component: CondensedComponent,
+      children: [{
+          path: 'masterdata',
+          loadChildren: './factoring/masterdata/client/client.module#ClientModule'
+      }],
   },
-  // SSO End
+  // SSO End  
   {
     path: 'condensed',
     component: CondensedComponent,
